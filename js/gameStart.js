@@ -12,6 +12,7 @@ class GameStart extends Phaser.Scene {
         this.add.image(50,50,"sugerField")
     }
     update(){
+        let thisShouldFail = true;
 
     }
 
