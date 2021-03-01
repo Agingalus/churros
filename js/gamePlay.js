@@ -5,7 +5,9 @@ class GamePlay extends Phaser.Scene {
 
     }
     preload(){
+        this.load.image("sugerField", "assets/sugerFields.jpg");
         this.load.image("sugerField", "assets/sugerFields.jpg")
+
     }
 
     create(){
