@@ -6,13 +6,17 @@ class GamePlay extends Phaser.Scene {
     }
     preload(){
         this.load.image("sugerField", "assets/sugerFields.jpg");
-        this.load.image("grass", "assets/grass.jpg")
+        this.load.image("grass", "assets/grass.jpg");
 
     }
 
+    
+
     create(){
         this.add.image(50,50,"sugerField");
-        this.add.image(50,50,"grass")
+        platforms = this.physics.add.staticGroup();
+        //this.add.image(50,50,"grass");
+        platforms.create(400, 568, 'grass').setScale(2).refreshBody();
     }
     update(){
 
