@@ -11,7 +11,7 @@ class GamePlay extends Phaser.Scene {
     }
 
     create(){
-        this.add.image(50,50,"sugerField")
+        this.add.image(50,50,"sugerField");
         this.add.image(50,50,"grass")
     }
     update(){
