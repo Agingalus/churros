@@ -7,17 +7,6 @@ let config = {
     height: 800,
     
     // transparent: true,
-    // title: 'We love Churros!',
-    // banner: {
-    //     text: 'black',
-    //     background: [
-    //         '#fff200',
-    //         '#38f0e8',
-    //         '#00bff3',
-    //         '#ec008c'
-    //     ],
-    //     hidePhaser: true
-    // },
 
     //autoCenter: true,
     mode: Phaser.Scale.FIT,
