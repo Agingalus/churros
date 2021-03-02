@@ -1,22 +1,21 @@
-class GamePlay extends Phaser.Scene {
+class EndGame extends Phaser.Scene {
 
     constructor() {
-        super({ key: "gamePlay" });
+        super({ key: "EndGame" });
 
     }
     preload(){
-        this.load.image("sugarField", "assets/sugarFields.jpg")
+        this.load.image("cinnamon", "assets/cinnamon.jfif")
         this.load.image("clickme", "assets/buttonclick.png")
-        this.scene.get('EndGame')
     }
 
     create(){
-        this.add.image(50,50,"sugarField")
+        this.add.image(50,50,"cinnamon")
         var button = this.add.image(200,100,"clickme").setInteractive();
         button.on('pointerdown', function(pointer){
             //replace line 18 with an updated line 17
-            this.scene.scene.start('EndGame');
-            //alert("Clicked to next page");
+            //this.Scene.launch('sceneName');
+            alert("You Win");
         });
         button.on('pointerout', function (pointer) {
 

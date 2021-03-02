@@ -13,7 +13,7 @@ let config = {
         }
     },
 
-    scene: [ GamePlay
+    scene: [ GamePlay, EndGame
     ]
 };
 
