@@ -11,7 +11,6 @@ class GamePlay extends Phaser.Scene {
     }
 
     
-
     create(){
         this.add.image(50,50,"sugerField");
        // platforms = this.physics.add.staticGroup();
