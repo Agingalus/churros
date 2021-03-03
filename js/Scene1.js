@@ -1,11 +1,11 @@
-class GamePlay extends Phaser.Scene {
+class Scene1 extends Phaser.Scene {
 
     constructor() {
-        super({ key: "GamePlay" });
+        super({ key: "Scene1" });
 
     }
     preload(){
-        this.load.image("sugerField", "assets/sugerFields.jpg");
+      
         this.load.image("grass", "assets/grass.jpg");
 
     }
@@ -13,11 +13,17 @@ class GamePlay extends Phaser.Scene {
     
 
     create(){
-        this.add.image(50,50,"sugerField");
+        
+        //this.add.image(50,50,"sugerField");
         platforms = this.physics.add.staticGroup();
         //this.add.image(50,50,"grass");
         platforms.create(400, 568, 'grass').setScale(2).refreshBody();
-    }
+        const text = this.add.text(350, 350, 'Click to see the next image');
+
+        text.setInteractive().on('pointerdown', () => {
+            this.scene.start('GamePlay');
+            console.log('hello!!');
+    })}
     update(){
 
     }

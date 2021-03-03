@@ -13,7 +13,9 @@ let config = {
         }
     },
 
-    scene: [ GamePlay
+    scene: [ 
+        Scene1,
+        GamePlay,
     ]
 };
 
