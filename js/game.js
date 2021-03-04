@@ -19,9 +19,12 @@ let config = {
         }
     },
 
-    scene: [ GamePlay
+    scene: [ 
+        Scene1,
+        GamePlay,
     ]
 };
 
 
 let game = new Phaser.Game(config);
+let platforms;
