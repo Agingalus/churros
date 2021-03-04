@@ -21,6 +21,7 @@ let config = {
 
     scene: [ 
         Scene1,
+       //sprint1ES EndGame,
         GamePlay,
     ]
 };

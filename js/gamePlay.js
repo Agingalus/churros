@@ -1,17 +1,24 @@
 class GamePlay extends Phaser.Scene {
 
     constructor() {
-        super({ key: "GamePlay" });
+        super({ key: "gamePlay" });
 
     }
     preload(){
+<<<<<<< HEAD
         this.load.image("sugerField", "assets/sugerFields.jpg");
       
 
+=======
+        this.load.image("sugarField", "assets/sugarFields.jpg")
+        this.load.image("clickme", "assets/buttonclick.png")
+        this.scene.get('EndGame')
+>>>>>>> sprint1ES
     }
 
     
     create(){
+<<<<<<< HEAD
         var suggerFile = this.add.image(0,0,"sugerField");
         suggerFile.setScale(2);
 
@@ -45,6 +52,18 @@ class GamePlay extends Phaser.Scene {
        // platforms = this.physics.add.staticGroup();
         //this.add.image(50,50,"grass");
        // platforms.create(400, 568, 'grass').setScale(2).refreshBody();
+=======
+        this.add.image(50,50,"sugarField")
+        var button = this.add.image(200,100,"clickme").setInteractive();
+        button.on('pointerdown', function(pointer){
+            //replace line 18 with an updated line 17
+            this.scene.scene.start('EndGame');
+            //alert("Clicked to next page");
+        });
+        button.on('pointerout', function (pointer) {
+
+       });
+>>>>>>> sprint1ES
     }
     update(){
 
