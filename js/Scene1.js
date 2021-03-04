@@ -21,7 +21,7 @@ class Scene1 extends Phaser.Scene {
         const text = this.add.text(350, 350, 'Click to see the next image');
 
         text.setInteractive().on('pointerdown', () => {
-            this.scene.start('GamePlay');
+            this.scene.start('gamePlay');
             console.log('hello!!');
     })}
     update(){
