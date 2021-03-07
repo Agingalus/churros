@@ -7,6 +7,7 @@ class Scene1 extends Phaser.Scene {
     preload(){
       
         this.load.image("grass", "assets/grass.jpg");
+        this.load.audio("audio1", "audio/Recording.m4a");
 
     }
 
