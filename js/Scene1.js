@@ -32,7 +32,7 @@ class Scene1 extends Phaser.Scene {
     
         var style = { font: "48px Arial", fill: "#cdba52", align: "center" };
     
-        text1 = game.add.text(game.world.centerX, 250, "Blaster: Stopped", style);
+        text1 = game.add.text(game.world.centerX, 245, "Audio1: Stopped", style);
         text1.anchor.set(0.5);
     
     
