@@ -21,16 +21,36 @@ class Scene1 extends Phaser.Scene {
         platforms.create(400, 568, 'grass').setScale(2).refreshBody();
         const text = this.add.text(350, 350, 'Click to see the next image');
 
-        audio1 = game.add.audio('audio1');
-        game.sound.setDecodedCallback([ audio1 ], start, this);
+        text.setInteractive().on('pointerdown', () => {
+            this.scene.scene.start('gamePlay');
+            console.log('hello!!');
+    })}
 
+     start() {
+
+        text.text = 'Press 1';
+    
+        var style = { font: "48px Arial", fill: "#cdba52", align: "center" };
+    
+        text1 = game.add.text(game.world.centerX, 250, "Blaster: Stopped", style);
+        text1.anchor.set(0.5);
+    
+    
+        audio1.onStop.add(soundStopped, this);
+        
+    
+        keys = game.input.keyboard.addKeys({ audio1: Phaser.Keyboard.ONE });
+    
+        keys.audio1.onDown.add(playFx, this);
+        
+    
+        
+        game.input.onDown.add(onTouch, this);
+    
     }
 
-        text.setInteractive().on('pointerdown', () => {
-            this.scene.start('gamePlay');
-            console.log('hello!!');
 
-    })}
+
     update(){
 
     }
