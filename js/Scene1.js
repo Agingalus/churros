@@ -10,9 +10,6 @@ class Scene1 extends Phaser.Scene {
         this.load.audio("audio1", "audio/Recording.m4a");
 
     }
-
-    
-
     create(){
         
         //this.add.image(50,50,"sugerField");
@@ -22,8 +19,10 @@ class Scene1 extends Phaser.Scene {
         const text = this.add.text(350, 350, 'Click to see the next image');
 
         text.setInteractive().on('pointerdown', () => {
+            
             this.scene.start('gamePlay');
             console.log('hello!!');
+
             audio1 = game.add.audio('audio1');
             game.sound.setDecodedCallback([ audio1 ], start, this);
     })}
@@ -37,16 +36,9 @@ class Scene1 extends Phaser.Scene {
         text1 = game.add.text(game.world.centerX, 245, "Audio1: Stopped", style);
         text1.anchor.set(0.5);
     
+    keys = game.input.keyboard.addKeys({ audio1: Phaser.Keyboard.ONE });
     
-        
-        
-    
-        keys = game.input.keyboard.addKeys({ audio1: Phaser.Keyboard.ONE });
-    
-        keys.audio1.onDown.add(play1, this);
-        
-    
-        
+        keys.audio1.onDown.add(play1, this); 
         game.input.onDown.add(onT, this);
     
     }
@@ -56,8 +48,6 @@ class Scene1 extends Phaser.Scene {
     
        
             play1(keys.audio1);
-        
-    
     }
     
      play1(key) {
@@ -66,7 +56,7 @@ class Scene1 extends Phaser.Scene {
         {
             case Phaser.Keyboard.ONE:
                 text1.text = "audio1: Playing";
-                audio1.play();
+                audio1.play1();
                 break;
     
             
