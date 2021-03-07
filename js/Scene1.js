@@ -22,10 +22,14 @@ class Scene1 extends Phaser.Scene {
         const text = this.add.text(350, 350, 'Click to see the next image');
 
         audio1 = game.add.audio('audio1');
+        game.sound.setDecodedCallback([ audio1 ], start, this);
+
+    }
 
         text.setInteractive().on('pointerdown', () => {
             this.scene.start('gamePlay');
             console.log('hello!!');
+
     })}
     update(){
 
