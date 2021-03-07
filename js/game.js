@@ -20,6 +20,7 @@ let config = {
     },
 
     scene: [ 
+        Clue1,
         Scene1,
         EndGame,
         GamePlay,
