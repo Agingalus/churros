@@ -7,7 +7,7 @@ class Scene1 extends Phaser.Scene {
     preload(){
       
         this.load.image("grass", "assets/grass.jpg");
-        this.load.audio("audio1", "audio/Recording.m4a");
+        this.load.audio("audio1", "audio/Recording.mp3");
 
     }
     create(){
@@ -22,9 +22,10 @@ class Scene1 extends Phaser.Scene {
             
             this.scene.start('gamePlay');
             console.log('hello!!');
-            let audio1 = this.audio1.add('audio1')
+            let audio1 = Scene1.audio1.add('audio1');
+            audio1.play1();
            // audio1 = game.add.audio('audio1');
-           let sound = this.sound.add('sound')
+           let sound = this.sound.add('audio1')
             game.audio1.setDecodedCallback([ audio1 ], start, this);
             game.sound.setDecodedCallback([ audio1 ], start, this);
     })}
