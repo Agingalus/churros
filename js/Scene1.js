@@ -24,6 +24,7 @@ class Scene1 extends Phaser.Scene {
             console.log('hello!!');
             let audio1 = this.audio1.add('audio1')
            // audio1 = game.add.audio('audio1');
+           let sound = this.sound.add('sound')
             game.audio1.setDecodedCallback([ audio1 ], start, this);
     })}
 
