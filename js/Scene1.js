@@ -7,6 +7,7 @@ class Scene1 extends Phaser.Scene {
     preload(){
       
         this.load.image("grass", "assets/grass.jpg");
+        this.load.image("road", "assets/road.png");
         this.load.audio("audio1", "audio/Recording.mp3");
 
     }
@@ -16,6 +17,7 @@ class Scene1 extends Phaser.Scene {
         platforms = this.physics.add.staticGroup();
         //this.add.image(50,50,"grass");
         platforms.create(400, 568, 'grass').setScale(2).refreshBody();
+        platforms.create(500, 568, 'road').setScale(2).refreshBody();
         const text = this.add.text(350, 350, 'Welcome to ...');
 
         let sound = this.sound.add('audio1')
