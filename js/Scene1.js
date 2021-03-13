@@ -42,27 +42,12 @@ class Scene1 extends Phaser.Scene {
         text1 = game.add.text(game.world.centerX, 245, "Audio1: Stopped", style);
         text1.anchor.set(0.5);
     
-    keys = game.input.keyboard.addKeys({ audio1: Phaser.Keyboard.ONE });
     
-        keys.audio1.onDown.add(play1, this); 
         
     
     }
     
     
-     play1(key) {
-    
-        switch (key.keyCode)
-        {
-            case Phaser.Keyboard.ONE:
-                text1.text = "audio1: Playing";
-                audio1.play1();
-                break;
-    
-            
-        }
-    
-    }
     
     
     
