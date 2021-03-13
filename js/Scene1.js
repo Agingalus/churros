@@ -16,19 +16,22 @@ class Scene1 extends Phaser.Scene {
         platforms = this.physics.add.staticGroup();
         //this.add.image(50,50,"grass");
         platforms.create(400, 568, 'grass').setScale(2).refreshBody();
-        const text = this.add.text(350, 350, 'Click to see the next image');
+        const text = this.add.text(350, 350, 'Welcome to ...');
+
+        let sound = this.sound.add('audio1')
 
         text.setInteractive().on('pointerdown', () => {
             
             this.scene.start('gamePlay');
             console.log('hello!!');
-            let audio1 = Scene1.audio1.add('audio1');
-            audio1.play1();
+           // let audio1 = Scene1.audio1.add('audio1');
+            sound.play();
            // audio1 = game.add.audio('audio1');
-           let sound = this.sound.add('audio1')
-            game.audio1.setDecodedCallback([ audio1 ], start, this);
-            game.sound.setDecodedCallback([ audio1 ], start, this);
-    })}
+           
+          //  game.audio1.setDecodedCallback([ audio1 ], start, this);
+        //    game.sound.setDecodedCallback([ audio1 ], start, this);
+    }
+    )}
 
      start() {
 
