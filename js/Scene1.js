@@ -16,8 +16,8 @@ class Scene1 extends Phaser.Scene {
         //this.add.image(50,50,"sugerField");
         platforms = this.physics.add.staticGroup();
         //this.add.image(50,50,"grass");
-        platforms.create(400, 568, 'grass').setScale(2).refreshBody();
-        platforms.create(500, 568, 'road').setScale(2).refreshBody();
+        platforms.create(400, 500, 'grass').setScale(2).refreshBody();
+        platforms.create(400, 500, 'road').setScale(2).refreshBody();
         const text = this.add.text(350, 350, 'Welcome to ...');
 
         let sound = this.sound.add('audio1')
