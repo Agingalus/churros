@@ -45,16 +45,10 @@ class Scene1 extends Phaser.Scene {
     keys = game.input.keyboard.addKeys({ audio1: Phaser.Keyboard.ONE });
     
         keys.audio1.onDown.add(play1, this); 
-        game.input.onDown.add(onT, this);
+        
     
     }
-     onT(pointer) {
-
-        var g = game.height;
     
-       
-            play1(keys.audio1);
-    }
     
      play1(key) {
     
